@@ -1,0 +1,270 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.header-base {
+  background-color: rgb(0, 75, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  padding: 10px 25px;
+}
+
+.logo {
+  width: 150px;
+}
+
+.btn {
+  background-color: rgb(255, 0, 0);
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+  padding: 5px 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn2 {
+  background-color: rgb(255, 0, 0);
+  border-radius: 0 15px 15px 0;
+  color: rgb(255, 255, 255);
+  padding: 5px 20px;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn2:hover {
+  background-color: rgba(213, 7, 7, 0.663);
+}
+
+.btn:hover {
+  background-color: rgba(213, 7, 7, 0.663);
+}
+
+.link a {
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.link a:hover {
+  background-color: rgb(238, 235, 239, 0.167);
+}
+
+.link button:hover {
+  color: rgb(198, 9, 9);
+}
+
+.Landing-page {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 40px;
+  border-radius: 0 0 40px 40px;
+}
+
+.Search input {
+  color: rgb(255, 255, 255);
+  background-color: #6b6d6d8d;
+  border-radius: 50px 0 0 50px;
+  border: none;
+  height: 30px;
+  padding: 0px 10px;
+  outline: none;
+}
+
+.Search button {
+  position: absolute;
+  left: 182px;
+  height: 30px;
+}
+
+.image-edit img {
+  border-radius: 25px;
+  width: 700px;
+  animation: fadeInUp 1s ease-out 0.3s forwards;
+  opacity: 0;
+}
+
+.left-section {
+  width: 600px;
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.product-container {
+  padding: 25px 40px;
+}
+
+.product-container span {
+  color: rgb(206, 5, 5);
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.product-headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-headers h1 {
+  margin-top: 0;
+}
+
+.card {
+  width: 300px;
+  background-color: #e1e0e0;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  z-index: 1;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card:hover::before,
+.card:hover::after {
+  opacity: 1; /* إظهار النور */
+  animation: neonBorder 3s linear infinite; /* تشغيل حركة الألوان باستمرار */
+}
+
+.card:hover .card-info {
+  background-position: 150% 0%;
+}
+
+.card .edit {
+  width: 300px;
+  border-radius: 15px 15px 0 0;
+}
+
+.card-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  margin: none;
+
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.6) 50%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    /* الضوء المائل */
+    linear-gradient(0deg, rgb(169, 171, 171) 0%, rgba(200, 201, 202, 1) 100%); /* التدرج الأصلي */
+
+  background-size: 300% 100%;
+  background-position: -200% 0%;
+  transition: background-position 0.4s ease;
+}
+
+.card-info img {
+  width: 50px;
+}
+
+.Shoping {
+  border-radius: 15px;
+  padding: 0 5px;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+  transform: skewX(-25deg); 
+  pointer-events: none; 
+  z-index: 2;
+}
+
+
+.card:hover::before {
+  animation: continuousShine 1.2s infinite;
+}
+
+
+.card::before,
+.card::after {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  z-index: -1; 
+  border-radius: 14px; 
+
+
+  background: linear-gradient(
+    45deg,
+    #0b0b0b,
+    #3300ff96,
+    #323233,
+    #4b4744,
+    #6b6d6d
+  );
+  background-size: 400%;
+
+  opacity: 0; 
+  transition: opacity 0.3s ease;
+}
+
+
+.card::after {
+  filter: blur(20px); 
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0%; 
+  }
+  100% {
+    background-position: 200% 0%;
+  }
+}
+
+@keyframes continuousShine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+@keyframes neonBorder {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

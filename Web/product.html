@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar">
+  <!--HEAD-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <title>GETRONICX.GTX</title>
+    <link rel="icon" href="image/download.png" />
+  </head>
+<body class="hero-container">
+
+   <!--Header Page-->
+    <div class="hearder-base">
+      <img class="logo-edit" src="image/download.png" />
+
+      <div class="link-edit">
+        <a href="index.html">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Workshop</a>
+
+        <button class="btn">Sing in</button>
+      </div>
+    </div>
+
+  <!-- Product Details Section -->
+  <div class="details-wrapper">
+    <div class="details-container">
+      
+      <!-- صورة المنتج -->
+      <div class="details-image">
+        <img id="product-img"/>
+      </div>
+
+      <!-- معلومات المنتج -->
+      <div class="details-content">
+        <span id="product-category" class="category-badge"></span>
+        <h1 id="product-name" class="details-title"></h1>
+        <div id="product-price" class="details-price"></div>
+
+        <hr class="divider" />
+
+        <h3>الوصف:</h3>
+        <p id="product-description" class="details-desc"></p>
+
+        <h3>المواصفات الفنية:</h3>
+        <ul id="product-specs" class="details-specs"></ul>
+
+        <div class="details-actions">
+          <button class="buy-btn">طلب المنتج الآن</button>
+          <a href="index.html" class="back-btn">← العودة للمنتجات</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- استدعاء ملف البيانات أولاً ثم ملف التحميل الديناميكي -->
+  <script src="products-data.js"></script>
+  <script src="product-detail.js"></script>
+</body>
+</html>
